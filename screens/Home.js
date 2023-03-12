@@ -7,13 +7,15 @@ import {
   Platform,
 } from "react-native";
 import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+
 import HomeHeader from "../src/components/HomeHeader";
+import HomeCard from "../src/components/HomeCard";
 
 const Home = () => {
   return (
     <SafeAreaView style={styles.androidSafeArea}>
       <HomeHeader />
+      <HomeCard />
     </SafeAreaView>
   );
 };
