@@ -6,6 +6,7 @@ import Home from "./screens/Home";
 import Screen1 from "./screens/Screen1";
 import Screen2 from "./screens/Screen2";
 import Screen3 from "./screens/Screen3";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function App() {
   const Tab = createBottomTabNavigator();
@@ -18,11 +19,13 @@ export default function App() {
               let iconName;
 
               if (route.name === "Home") {
-                iconName = focused
-                  ? "ios-information-circle"
-                  : "ios-information-circle-outline";
-              } else if (route.name === "Settings") {
-                iconName = focused ? "ios-list" : "ios-list-outline";
+                iconName = focused ? "home" : "home-outline";
+              } else if (route.name === "Screen1") {
+                iconName = focused ? "albums" : "albums-outline";
+              } else if (route.name === "Screen2") {
+                iconName = focused ? "card" : "card-outline";
+              } else if (route.name === "Screen3") {
+                iconName = focused ? "cube" : "cube-outline";
               }
 
               // You can return any component that you like here!
@@ -32,27 +35,10 @@ export default function App() {
             tabBarInactiveTintColor: "gray",
           })}
         >
-          >
-          <Tab.Screen
-            name="Home"
-            component={Home}
-            options={{ tabBarBadge: 3 }}
-          />
-          <Tab.Screen
-            name="Screen1"
-            component={Screen1}
-            options={{ tabBarBadge: 3 }}
-          />
-          <Tab.Screen
-            name="Screen2"
-            component={Screen2}
-            options={{ tabBarBadge: 3 }}
-          />
-          <Tab.Screen
-            name="Screen3"
-            component={Screen3}
-            options={{ tabBarBadge: 3 }}
-          />
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="Screen1" component={Screen1} />
+          <Tab.Screen name="Screen2" component={Screen2} />
+          <Tab.Screen name="Screen3" component={Screen3} />
         </Tab.Navigator>
       </NavigationContainer>
     </View>
