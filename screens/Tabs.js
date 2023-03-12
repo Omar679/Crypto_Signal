@@ -30,6 +30,11 @@ const Tabs = () => {
         },
         tabBarActiveTintColor: "#7096EB",
         tabBarInactiveTintColor: "gray",
+        tabBarStyle: {
+          backgroundColor: "#fff",
+          borderTopColor: "#fff",
+        },
+        headerShown: false,
       })}
     >
       <Tab.Screen name="Home" component={Home} />
